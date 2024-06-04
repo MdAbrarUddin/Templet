@@ -1,0 +1,77 @@
+@import "./mixin";
+@import "./scheme";
+@import "./variable";
+
+
+
+.container {
+    width: min(95%, 98vw);
+    min-height: $height;
+    margin: $margin auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.c1{
+    @include color-scheme($clr-txt,$clr-bg);
+
+}
+
+.c2{
+    @include color-scheme($gradient-scheme-accent ...);
+}
+
+
+.btn {
+    width: 5rem;
+    height: 2.5rem;
+    @include color-scheme($simple-scheme ...);
+    border: none;
+
+    &:hover {
+        @include color-scheme($hover-scheme ...);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px) {
+    :root {
+        --h: 95vh;
+        --m: calc((100vh - var(--h)) / 2);
+    }
+
+    .container {
+        min-height: var(--h);
+        margin: var(--m) auto;
+    }
+}
+
+@media(max-width:480px) {
+    :root {
+        --h: 98vh;
+        --m: calc((100vh - var(--h)) / 2);
+    }
+
+    .container {
+        min-height: var(--h);
+        margin: var(--m) auto;
+    }
+}

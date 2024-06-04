@@ -1,0 +1,15 @@
+@use "sass:list";
+
+
+@mixin color-scheme($text-color, $bg-color) {
+    @if list.length($bg-color)==1 {
+        background-color: $bg-color ;
+
+    }
+
+    @else {
+        background-image: linear-gradient(180deg, $bg-color);
+    }
+
+    color: $text-color;
+}

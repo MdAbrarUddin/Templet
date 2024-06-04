@@ -1,0 +1,8 @@
+@import "./variable";
+
+$hover-scheme:$clr-bg-light,$clr-bdr;
+$simple-scheme:$clr-txt, $clr-bg-light;
+
+$gradient-scheme:$clr-bg,$clr-bdr;
+
+$gradient-scheme-accent:$clr-txt,$gradient-scheme;
